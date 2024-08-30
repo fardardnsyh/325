@@ -1,0 +1,77 @@
+{
+	"name": "website",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Personal website of Germán Freixinós López, front-end web developer.",
+	"keywords": [
+		"11ty-website",
+		"blog",
+		"eleventy-site",
+		"eleventy-website",
+		"eleventy",
+		"frontend-developer",
+		"frontend-web-developer",
+		"frontend-web",
+		"frontend",
+		"jamstack-site",
+		"jamstack",
+		"netlify",
+		"personal-website",
+		"portfolio-page",
+		"portfolio-site",
+		"portfolio-website",
+		"portfolio",
+		"potfolioweb",
+		"static-site",
+		"website"
+	],
+	"homepage": "https://github.com/germanfrelo/website#readme",
+	"bugs": {
+		"url": "https://github.com/germanfrelo/website/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/germanfrelo/website.git"
+	},
+	"license": "ISC",
+	"author": "Germán Freixinós López",
+	"main": ".eleventy.js",
+	"scripts": {
+		"build": "eleventy",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"lint": "npm run lint:css && npm run lint:js",
+		"lint:css": "stylelint --max-warnings 0 \"**/*.css\"",
+		"lint:css:fix": "npm run lint:css -- --fix",
+		"lint:fix": "npm run lint:css:fix && npm run lint:js:fix",
+		"lint:js": "eslint --max-warnings 0",
+		"lint:js:fix": "npm run lint:js -- --fix",
+		"prepare": "husky",
+		"start": "eleventy --serve"
+	},
+	"lint-staged": {
+		"*.css": [
+			"stylelint --max-warnings 0",
+			"prettier --write"
+		],
+		"*.js": [
+			"eslint --max-warnings 0 --no-warn-ignored",
+			"prettier --write"
+		],
+		"!(*.css|*.js)": [
+			"prettier --write --ignore-unknown"
+		]
+	},
+	"devDependencies": {
+		"@11ty/eleventy": "2.0.1",
+		"@eslint/js": "9.9.0",
+		"eslint": "9.9.0",
+		"globals": "15.9.0",
+		"husky": "9.1.4",
+		"lint-staged": "15.2.7",
+		"prettier": "3.3.3",
+		"stylelint": "16.8.1",
+		"stylelint-config-recess-order": "5.0.1",
+		"stylelint-config-standard": "36.0.1"
+	}
+}

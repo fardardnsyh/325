@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{{ title }}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Asap:wght@400..700&family=Fira+Sans:wght@700&display=swap" />
+		<link rel="stylesheet" href="/assets/css/styles.css" />
+		<meta name="author" content="Germán Freixinós López" />
+		<meta name="description" content="{{ description }}" />
+		<meta name="color-scheme" content="light dark" />
+		<meta name="generator" content="{{ eleventy.generator }}" />
+	</head>
+
+	<body>
+		{% include "partials/site-header.html" %}
+		<main class="site-main">{{ content | safe }}</main>
+		{% include "partials/site-footer.html" %}
+		<!-- 100% privacy-first analytics -->
+		<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+		<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+	</body>
+</html>

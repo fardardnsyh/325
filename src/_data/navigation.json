@@ -1,0 +1,29 @@
+{
+	"items": [
+		{
+			"text": "Home",
+			"url": "/",
+			"rel": ""
+		},
+		{
+			"text": "Projects",
+			"url": "/projects/",
+			"rel": ""
+		},
+		{
+			"text": "About",
+			"url": "/about/",
+			"rel": ""
+		},
+		{
+			"text": "Contact",
+			"url": "/contact/",
+			"rel": ""
+		},
+		{
+			"text": "CV ↗︎",
+			"url": "https://www.linkedin.com/in/germanfrelo",
+			"rel": "external me"
+		}
+	]
+}
